@@ -4,7 +4,7 @@ Evan Events
 *Support for event-driven programming in PHP classes*
 
 [![Build Status](https://travis-ci.org/tassoevan/evan-events.png?branch=master)](https://travis-ci.org/tassoevan/evan-events)
-[Package checklist status](http://phppackagechecklist.com/#1,2,3,5,6,7,8,13,14)
+[Package checklist status](http://phppackagechecklist.com/#1,2,3,4,5,6,7,8,9,11,13,14)
 
 Version: 0.0.1  
 Release date: 2014-12-12  
