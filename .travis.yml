@@ -2,4 +2,8 @@ language: php
 php:
   - 5.4
   - 5.5
-script: "phpunit --colors --coverage-text"
+install:
+  - composer install
+script:
+  - ./test-sniff-doc.sh
+
