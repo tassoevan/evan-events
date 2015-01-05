@@ -68,7 +68,7 @@ trait EventHandler
      */
     private function parseEventId($eventId)
     {
-        static $regexp = "/^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)*$/";
+        static $regexp = "/^[A-Za-z_\\-][A-Za-z0-9_\\-]*(\\.[A-Za-z_\\-][A-Za-z0-9_\\-]*)*$/";
 
         if (!preg_match($regexp, $eventId)) {
             throw new InvalidArgumentException("illegal event ID: {$eventId}");
@@ -90,7 +90,7 @@ trait EventHandler
      */
     private function parseEventIdPattern($eventIdPattern)
     {
-        static $regexp = "/^([A-Za-z_][A-Za-z0-9_]*|\\*)(\\.[A-Za-z_][A-Za-z0-9_]*)*$/";
+        static $regexp = "/^([A-Za-z_\\-][A-Za-z0-9_\\-]*|\\*)(\\.[A-Za-z_\\-][A-Za-z0-9_\\-]*)*$/";
 
         if (!preg_match($regexp, $eventIdPattern)) {
             throw new InvalidArgumentException("illegal event ID pattern: {$eventIdPattern}");
@@ -99,7 +99,7 @@ trait EventHandler
         $parts = array_map(
             function ($part) {
                 if ($part === "*") {
-                    return "([A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)*?)";
+                    return "([A-Za-z_\\-][A-Za-z0-9_\\-]*(\\.[A-Za-z_\\-][A-Za-z0-9_\\-]*)*?)";
                 } else {
                     return preg_quote($part);
                 }

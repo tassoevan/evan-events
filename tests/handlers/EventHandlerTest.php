@@ -4,7 +4,7 @@ use PHPUnit_Framework_TestCase as TestCase;
 class EventHandlerTest extends TestCase
 {
     private $handler;
-    
+
     public function setUp()
     {
         $this->handler = new EventHandlerMock();
@@ -15,6 +15,7 @@ class EventHandlerTest extends TestCase
         $this->handler->on("show", function () {});
         $this->handler->on("show.namespace", function () {});
         $this->handler->on("show.namespaceB.namespaceA", function () {});
+        $this->handler->on("show_1-2-3", function () {});
     }
 
     public function testOffValidEventIdsPatterns()
