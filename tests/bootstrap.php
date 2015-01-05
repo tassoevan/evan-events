@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 
-class EventHandlerMock
+class EventHandlerMock implements Evan\Events\EventHandlerInterface
 {
     use Evan\Events\EventHandler;
 }
