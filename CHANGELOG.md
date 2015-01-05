@@ -1,3 +1,9 @@
+## 0.1.1 (2015-01-05)
+
+Bugfixes:
+
+* Event ID identifier definition changed to include `-` character.
+
 ## 0.1.0 (2015-01-05)
 
 Features:
