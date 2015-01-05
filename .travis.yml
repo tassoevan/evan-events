@@ -5,5 +5,4 @@ php:
 install:
   - composer install
 script:
-  - ./test-sniff-doc.sh
-
+  - composer test-sniff-doc

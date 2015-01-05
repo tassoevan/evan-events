@@ -21,5 +21,12 @@
         "psr-4": {
             "Evan\\Events\\": "src/"
         }
+    },
+    "scripts": {
+        "test-sniff-doc": [
+            "vendor/bin/phpunit --configuration=tests/phpunit.xml",
+            "vendor/bin/phpdoc --target=docs/api --encoding=utf-8 --title=\"evan/events\" --force --validate --template=responsive-twig --directory=src/",
+            "vendor/bin/phpcs --report=full --standard=PSR2 src/"
+        ]
     }
 }

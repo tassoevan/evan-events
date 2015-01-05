@@ -46,9 +46,9 @@ the repository.
 Test, Sniff and Document
 ------------------------
 
-There is a bash script responsible to run unit tests, sniff code to validate the
-code standard and document everything:
+There is a Composer script responsible to run unit tests, sniff code to validate
+the code standard, and document everything:
 
 ```sh
-$ ./test-sniff-doc.sh
+$ composer test-sniff-doc
 ```
